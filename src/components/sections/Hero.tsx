@@ -1,16 +1,63 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { AnimatedText } from "@/components/ui/AnimatedText";
 import { Button } from "@/components/ui/Button";
 import { TrustBadge } from "@/components/ui/TrustBadge";
+import { useLenis } from "@/components/ui/SmoothScrollProvider";
 import { heroTrustItems } from "@/lib/data/experience";
 import { generalWhatsAppLink } from "@/lib/whatsapp";
 
+const INTRO_SESSION_KEY = "cs-intro-played";
+const INTRO_LOCK_MS = 2200;
+
 export function Hero() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const lenis = useLenis();
+
+  // Opening sequence: on the very first visit of the session, hold scroll
+  // locked while the hero text finishes animating in, then release and
+  // glide the page down past the hero on its own. Lenis intercepts
+  // wheel/touch scrolling itself, so both `lenis.stop()` (blocks Lenis's
+  // own scroll handling) and `overflow:hidden` (blocks native scrollbar/
+  // keyboard scrolling) are needed to actually hold the page still.
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (window.sessionStorage.getItem(INTRO_SESSION_KEY)) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      window.sessionStorage.setItem(INTRO_SESSION_KEY, "1");
+      return;
+    }
+    if (!lenis) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    lenis.stop();
+
+    const timer = window.setTimeout(() => {
+      document.body.style.overflow = previousOverflow;
+      lenis.start();
+      window.sessionStorage.setItem(INTRO_SESSION_KEY, "1");
+      const target = sectionRef.current?.getBoundingClientRect();
+      if (target) {
+        lenis.scrollTo(target.bottom + window.scrollY, { duration: 1.4 });
+      }
+    }, INTRO_LOCK_MS);
+
+    return () => {
+      window.clearTimeout(timer);
+      document.body.style.overflow = previousOverflow;
+      lenis.start();
+    };
+  }, [lenis]);
+
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#f6ece4] pt-32 pb-16 md:pt-0 md:pb-0">
+    <section
+      ref={sectionRef}
+      className="relative min-h-screen overflow-hidden bg-[#f6ece4] pt-32 pb-16 md:pt-0 md:pb-0"
+    >
       <motion.div
         aria-hidden
         initial={{ opacity: 0, scale: 1.08 }}
