@@ -16,7 +16,7 @@ type SideCaption = {
   position: "bottom-left" | "bottom-right" | "top-right";
 };
 
-const FADE_RANGE = 0.06;
+const FADE_RANGE = 0.03;
 
 const sideCaptions: SideCaption[] = [
   {
@@ -265,12 +265,13 @@ export function FrameScrollSection() {
                 captionRefs.current[caption.id] = el;
               }}
               className={cn(
-                "pointer-events-none absolute w-full max-w-md px-6 opacity-0 md:px-16",
-                caption.position === "top-right"
-                  ? "right-0 top-0 pt-28 text-right md:pt-36"
-                  : "bottom-16",
-                caption.position === "bottom-left" && "left-0 text-left",
-                caption.position === "bottom-right" && "right-0 text-right",
+                // On mobile every caption sits in the bottom zone (the heading
+                // owns the top), so it can never collide with it. Only at the
+                // md breakpoint does "top-right" move up into its own corner,
+                // where there is enough room beside the heading.
+                "pointer-events-none absolute bottom-16 w-full max-w-md px-6 opacity-0 md:px-16",
+                isRight ? "right-0 text-right" : "left-0 text-left",
+                caption.position === "top-right" && "md:bottom-auto md:top-0 md:pt-36",
               )}
             >
               <div className={cn("relative w-fit", isRight && "ml-auto")}>
