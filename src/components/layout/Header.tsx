@@ -35,7 +35,7 @@ export function Header() {
     <>
       <header
         className={cn(
-          "fixed inset-x-0 top-0 z-50 border-b transition-all duration-500",
+          "fixed inset-x-0 top-0 z-[70] border-b transition-all duration-500",
           scrolled || menuOpen
             ? "border-[var(--color-border)] bg-[var(--color-background)]/95 backdrop-blur-md"
             : "border-[var(--color-border)]/70 bg-[var(--color-background)]/85 backdrop-blur-sm",

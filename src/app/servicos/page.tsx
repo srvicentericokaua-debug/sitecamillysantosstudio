@@ -13,7 +13,7 @@ export default function ServicosPage() {
   return (
     <>
       <div className="h-24 md:h-28" aria-hidden />
-      <Services />
+      <Services showCta={false} />
       <FinalCTA />
     </>
   );

@@ -12,7 +12,7 @@ export default function ResultadosPage() {
   return (
     <>
       <div className="h-24 md:h-28" aria-hidden />
-      <Gallery />
+      <Gallery showCta={false} />
       <FinalCTA />
     </>
   );

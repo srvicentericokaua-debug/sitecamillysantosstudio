@@ -29,7 +29,7 @@ export function MobileMenu({ open, onNavigate }: MobileMenuProps) {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.35 }}
-          className="fixed inset-0 z-[60] flex flex-col justify-center bg-[var(--color-background)] px-8 lg:hidden"
+          className="fixed inset-0 z-[65] flex flex-col justify-center bg-[var(--color-background)] px-8 lg:hidden"
         >
           <motion.nav
             variants={listVariants}

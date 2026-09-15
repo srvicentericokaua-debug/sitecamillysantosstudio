@@ -8,7 +8,11 @@ import { Button } from "@/components/ui/Button";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { galleryItems } from "@/lib/data/gallery";
 
-export function Gallery() {
+type GalleryProps = {
+  showCta?: boolean;
+};
+
+export function Gallery({ showCta = true }: GalleryProps) {
   const scrollerRef = useRef<HTMLDivElement>(null);
   const [openSrc, setOpenSrc] = useState<{ src: string; video?: string; alt: string } | null>(
     null,
@@ -24,9 +28,11 @@ export function Gallery() {
         <div className="mb-14 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <SectionTitle eyebrow="Resultados reais" heading={["Clientes que", "confiam e amam"]} />
           <div className="flex items-center gap-3">
-            <Button href="/resultados" variant="outline">
-              Ver mais resultados
-            </Button>
+            {showCta && (
+              <Button href="/resultados" variant="outline">
+                Ver mais resultados
+              </Button>
+            )}
             <div className="hidden gap-2 md:flex">
               <button
                 aria-label="Anterior"

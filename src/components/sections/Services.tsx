@@ -8,15 +8,21 @@ import { SectionTitle } from "@/components/ui/SectionTitle";
 import { services } from "@/lib/data/services";
 import { serviceInquiryLink } from "@/lib/whatsapp";
 
-export function Services() {
+type ServicesProps = {
+  showCta?: boolean;
+};
+
+export function Services({ showCta = true }: ServicesProps) {
   return (
     <section className="bg-[var(--color-rose-light)] px-6 py-24 md:px-10 md:py-32">
       <div className="mx-auto max-w-7xl">
         <div className="mb-14 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <SectionTitle eyebrow="Nossos serviços" heading={["Técnicas que", "realçam o seu olhar"]} />
-          <Button href="/servicos" variant="outline">
-            Conheça todos os serviços
-          </Button>
+          {showCta && (
+            <Button href="/servicos" variant="outline">
+              Conheça todos os serviços
+            </Button>
+          )}
         </div>
 
         <div className="grid grid-cols-2 gap-5 md:grid-cols-4">

@@ -7,7 +7,6 @@ const FRAME_COUNT = 194;
 const EAGER_FRAMES = 16;
 const BATCH_SIZE = 6;
 const IMAGE_SCALE = 1.0;
-const SCROLL_VH = 380;
 
 type SideCaption = {
   id: string;
@@ -225,7 +224,7 @@ export function FrameScrollSection() {
   }, []);
 
   return (
-    <section ref={wrapperRef} className="relative" style={{ height: `${SCROLL_VH}vh` }}>
+    <section ref={wrapperRef} className="relative h-[240vh] md:h-[380vh]">
       <div className="sticky top-0 h-screen w-full overflow-hidden bg-[var(--color-blush)]">
         <div
           ref={canvasWrapRef}
@@ -244,11 +243,8 @@ export function FrameScrollSection() {
             <div className="relative w-fit">
               <div
                 aria-hidden
-                className="absolute -inset-6 md:-inset-10"
-                style={{
-                  background:
-                    "radial-gradient(closest-side, rgba(253,243,241,0.92) 0%, rgba(253,243,241,0.55) 55%, transparent 80%)",
-                }}
+                className="absolute -inset-4 rounded-2xl md:-inset-6"
+                style={{ background: "rgba(253,243,241,0.94)", filter: "blur(14px)" }}
               />
               <span className="relative block text-xs uppercase tracking-[0.35em] text-[var(--color-rose-deep)]">
                 O processo
@@ -280,11 +276,8 @@ export function FrameScrollSection() {
               <div className={cn("relative w-fit", isRight && "ml-auto")}>
                 <div
                   aria-hidden
-                  className="absolute -inset-6 md:-inset-8"
-                  style={{
-                    background:
-                      "radial-gradient(closest-side, rgba(253,243,241,0.92) 0%, rgba(253,243,241,0.5) 55%, transparent 80%)",
-                  }}
+                  className="absolute -inset-4 rounded-2xl md:-inset-5"
+                  style={{ background: "rgba(253,243,241,0.94)", filter: "blur(12px)" }}
                 />
                 <p className="font-display relative text-2xl leading-snug text-[var(--color-ink)] md:text-3xl">
                   {caption.text}
