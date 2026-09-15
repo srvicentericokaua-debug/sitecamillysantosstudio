@@ -85,27 +85,12 @@ body {
   transform-origin: left;
 }
 
-/* Blends the hero photo smoothly into the text zone: vertical fade on
-   mobile (text sits over the photo), horizontal fade on desktop (photo
-   sits in its own right-hand column). Single source of truth so the
-   fade always matches the photo's own box exactly, with no seam. */
+/* Blends the hero photo smoothly into the text zone on desktop, where the
+   photo lives in its own right-hand column. The photo is hidden entirely
+   on mobile (plain background there instead), so no mobile mask is needed. */
 .hero-photo-mask {
-  mask-image: linear-gradient(180deg, black 0%, black 10%, transparent 34%, transparent 78%, black 100%);
-  -webkit-mask-image: linear-gradient(
-    180deg,
-    black 0%,
-    black 10%,
-    transparent 34%,
-    transparent 78%,
-    black 100%
-  );
-}
-
-@media (min-width: 768px) {
-  .hero-photo-mask {
-    mask-image: linear-gradient(90deg, transparent 0%, black 42%);
-    -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 42%);
-  }
+  mask-image: linear-gradient(90deg, transparent 0%, black 42%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 42%);
 }
 
 @keyframes marquee-left {

@@ -16,7 +16,7 @@ export function Hero() {
         initial={{ opacity: 0, scale: 1.08 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.6, ease: [0.22, 1, 0.36, 1] }}
-        className="hero-photo-mask absolute inset-y-0 right-0 w-full md:w-[62%]"
+        className="hero-photo-mask absolute inset-y-0 right-0 hidden w-full md:block md:w-[62%]"
       >
         <Image
           src="/images/hero-studio.png"
