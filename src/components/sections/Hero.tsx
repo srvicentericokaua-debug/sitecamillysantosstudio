@@ -11,7 +11,11 @@ import { heroTrustItems } from "@/lib/data/experience";
 import { generalWhatsAppLink } from "@/lib/whatsapp";
 
 const INTRO_SESSION_KEY = "cs-intro-played";
-const INTRO_LOCK_MS = 2200;
+// Kept slightly longer than the route-transition overlay's own 6s runtime
+// (RouteTransitionOverlay.tsx) so the hero's auto-scroll never fires while
+// still hidden behind the overlay -- the user should see the hero settled
+// before the page glides away.
+const INTRO_LOCK_MS = 6400;
 
 export function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -97,9 +101,17 @@ export function Hero() {
           <AnimatedText
             as="h1"
             mode="lines"
-            text={["Seja bem-vinda", "ao Studio", "Camilly Santos."]}
+            text={["Sejam Bem-vindas!"]}
             delay={0.25}
-            className="font-display text-[12vw] leading-[1.05] text-[var(--color-ink)] md:text-[3.6rem] lg:text-[4.2rem]"
+            className="text-gold-metallic-deep font-display text-[13vw] leading-[1.05] md:text-[4.2rem] lg:text-[4.8rem]"
+          />
+
+          <AnimatedText
+            as="p"
+            mode="lines"
+            text={["ao Studio Camilly Santos"]}
+            delay={0.55}
+            className="text-gold-metallic-deep font-display mt-2 text-[6vw] leading-[1.15] tracking-[0.02em] md:text-[1.6rem] lg:text-[1.8rem]"
           />
 
           <motion.p
