@@ -25,6 +25,4 @@ export const purposeStatement = [
   "Cuido de olhares, autoestima e da forma como cada mulher se enxerga.",
 ];
 
-export const bigPhrase = "Seu olhar também conta a sua história.";
-
 export const heroQuote = "Mais que sobrancelhas, é sobre você.";

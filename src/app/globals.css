@@ -15,6 +15,7 @@
 
   --gradient-rose: linear-gradient(135deg, #ff3fa8 0%, #c2007a 100%);
   --gradient-mauve: linear-gradient(135deg, #2a1520 0%, #0d0609 100%);
+  --gradient-gold-metallic: linear-gradient(115deg, #6b4a10 0%, #f0b429 24%, #fbe7b0 44%, #c9861f 60%, #fbe7b0 80%, #6b4a10 100%);
 }
 
 @theme inline {
@@ -56,6 +57,14 @@ body {
 
 .bg-gradient-mauve {
   background: var(--gradient-mauve);
+}
+
+.text-gold-metallic {
+  background-image: var(--gradient-gold-metallic);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 ::selection {

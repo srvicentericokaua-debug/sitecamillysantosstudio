@@ -2,7 +2,6 @@ import { Hero } from "@/components/sections/Hero";
 import { MarqueeStrip } from "@/components/ui/MarqueeStrip";
 import { FrameScrollSection } from "@/components/sections/FrameScrollSection";
 import { AboutCamilly } from "@/components/sections/AboutCamilly";
-import { BigPhrase } from "@/components/sections/BigPhrase";
 import { Services } from "@/components/sections/Services";
 import { Gallery } from "@/components/sections/Gallery";
 import { Experience } from "@/components/sections/Experience";
@@ -28,7 +27,6 @@ export default function Home() {
       />
       <FrameScrollSection />
       <AboutCamilly />
-      <BigPhrase />
       <Services />
       <Gallery />
       <Experience />
