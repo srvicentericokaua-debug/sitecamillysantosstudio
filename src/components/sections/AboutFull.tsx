@@ -44,7 +44,7 @@ export function AboutFull() {
             as="h2"
             mode="lines"
             text={["Minha paixão pela beleza", "se transformou em propósito."]}
-            className="font-display max-w-xl text-3xl leading-[1.15] text-[var(--color-ink)] md:text-5xl"
+            className="text-gold-metallic-deep font-display max-w-xl text-3xl leading-[1.15] md:text-5xl"
           />
 
           <div className="mt-9 flex max-w-xl flex-col gap-5">
@@ -72,7 +72,7 @@ export function AboutFull() {
                 transition={{ duration: 0.6, delay: i * 0.15 }}
                 className="max-w-[200px]"
               >
-                <span className="font-display text-5xl text-[var(--color-ink)] md:text-6xl">
+                <span className="text-gold-metallic-deep font-display text-5xl md:text-6xl">
                   {stat.prefix}
                   {stat.value}
                   <span className="text-xl align-top text-[var(--color-rose)]"> {stat.suffix}</span>
@@ -89,7 +89,7 @@ export function AboutFull() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="mt-14 border-t border-[var(--color-border)] pt-8"
           >
-            <p className="font-script text-4xl text-[var(--color-rose-deep)]">Camilly Santos</p>
+            <p className="text-gold-metallic-deep font-script text-4xl">Camilly Santos</p>
             <p className="mt-1 text-xs uppercase tracking-[0.2em] text-[var(--color-muted)]">
               Fundadora do Studio
             </p>

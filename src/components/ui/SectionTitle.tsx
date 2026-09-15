@@ -42,7 +42,7 @@ export function SectionTitle({
         mode="lines"
         text={heading}
         className={cn(
-          "font-display text-4xl leading-[1.1] text-[var(--color-ink)] md:text-5xl",
+          "text-gold-metallic-deep font-display text-4xl leading-[1.1] md:text-5xl",
           headingClassName,
         )}
       />

@@ -21,11 +21,6 @@ export function RouteTransitionOverlay() {
           transition={{ duration: 6, times: [0, 0.15, 0.85, 0.95], ease: [0.76, 0, 0.24, 1] }}
           className="relative flex items-center justify-center px-14 py-8"
         >
-          <div
-            aria-hidden
-            className="absolute inset-0 rounded-full"
-            style={{ background: "rgba(12, 3, 8, 0.72)", filter: "blur(24px)" }}
-          />
           <motion.span
             initial={{ clipPath: "inset(0 101% 0 0)" }}
             animate={{ clipPath: "inset(0 0% 0 0)" }}

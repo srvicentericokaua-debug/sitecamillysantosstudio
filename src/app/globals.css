@@ -15,7 +15,7 @@
 
   --gradient-rose: linear-gradient(135deg, #ff3fa8 0%, #c2007a 100%);
   --gradient-mauve: linear-gradient(135deg, #2a1520 0%, #0d0609 100%);
-  --gradient-gold-metallic: linear-gradient(115deg, #6b4a10 0%, #f0b429 24%, #fbe7b0 44%, #c9861f 60%, #fbe7b0 80%, #6b4a10 100%);
+  --gradient-gold-metallic: linear-gradient(115deg, #7a3e10 0%, #d9821f 24%, #ffb84d 44%, #b8720b 60%, #ffb84d 80%, #7a3e10 100%);
   --gradient-gold-metallic-deep: linear-gradient(115deg, #7a4f10 0%, #c9861f 22%, #8a5a10 42%, #e0a52a 60%, #7a4f10 80%, #c9861f 100%);
 }
 

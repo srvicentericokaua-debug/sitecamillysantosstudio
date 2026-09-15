@@ -60,7 +60,7 @@ export function Hero() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen overflow-hidden bg-[#f6ece4] pt-32 pb-16 md:pt-0 md:pb-0"
+      className="relative min-h-screen overflow-hidden bg-[#f6ece4] pt-16 pb-16 md:pt-0 md:pb-0"
     >
       <motion.div
         aria-hidden
@@ -86,7 +86,7 @@ export function Hero() {
         style={{ background: "linear-gradient(180deg, #f6ece4 0%, transparent 100%)" }}
       />
 
-      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col px-6 pt-20 md:flex-row md:items-center md:px-10 md:pt-0">
+      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-6 md:flex-row md:items-center md:justify-start md:px-10">
         <div className="w-full py-10 md:w-[52%] md:py-24">
           <motion.span
             initial={{ opacity: 0, y: 10 }}

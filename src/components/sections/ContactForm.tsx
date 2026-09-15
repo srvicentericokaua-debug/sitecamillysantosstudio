@@ -23,14 +23,20 @@ export function ContactForm() {
     <section className="bg-[var(--color-blush)] px-6 py-28 md:px-10 md:py-40">
       <div className="mx-auto grid max-w-6xl gap-16 md:grid-cols-2 md:gap-24">
         <div>
-          <span className="mb-3 block text-xs font-semibold uppercase tracking-[0.3em] text-[var(--color-rose)]">
+          <motion.span
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.8 }}
+            transition={{ duration: 0.6 }}
+            className="mb-3 block text-xs font-semibold uppercase tracking-[0.3em] text-[var(--color-rose)]"
+          >
             Contato
-          </span>
+          </motion.span>
           <AnimatedText
             as="h1"
             mode="lines"
             text={["Vamos cuidar", "do seu olhar?"]}
-            className="font-display text-4xl leading-[1.1] text-[var(--color-ink)] md:text-6xl"
+            className="text-gold-metallic-deep font-display text-4xl leading-[1.1] md:text-6xl"
           />
           <p className="mt-7 max-w-sm text-[var(--color-muted)]">
             Preencha o formulário e conversaremos diretamente pelo WhatsApp para confirmar o

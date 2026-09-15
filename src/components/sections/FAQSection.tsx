@@ -23,14 +23,21 @@ export function FAQSection() {
           {faqItems.map((item, i) => {
             const open = openIndex === i;
             return (
-              <div key={item.question} className="border-b border-[var(--color-border)]">
+              <motion.div
+                key={item.question}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.8 }}
+                transition={{ duration: 0.5, delay: i * 0.06, ease: [0.22, 1, 0.36, 1] }}
+                className="border-b border-[var(--color-border)]"
+              >
                 <button
                   type="button"
                   onClick={() => setOpenIndex(open ? null : i)}
                   className="flex w-full items-center justify-between gap-6 py-6 text-left"
                   aria-expanded={open}
                 >
-                  <span className="font-display text-lg text-[var(--color-ink)] md:text-xl">
+                  <span className="text-gold-metallic-deep font-display text-lg md:text-xl">
                     {item.question}
                   </span>
                   <motion.span
@@ -56,7 +63,7 @@ export function FAQSection() {
                     </motion.div>
                   )}
                 </AnimatePresence>
-              </div>
+              </motion.div>
             );
           })}
         </div>

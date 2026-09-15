@@ -43,7 +43,7 @@ export function MobileMenu({ open, onNavigate }: MobileMenuProps) {
                 <Link
                   href={link.href}
                   onClick={onNavigate}
-                  className="font-display text-4xl text-[var(--color-ink)]"
+                  className="text-gold-metallic-deep font-display text-4xl"
                 >
                   {link.label}
                 </Link>

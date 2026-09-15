@@ -37,7 +37,7 @@ export function AboutCamilly() {
             as="h2"
             mode="lines"
             text={["Beleza que valoriza", "o seu olhar"]}
-            className="font-display max-w-lg text-3xl leading-[1.15] text-[var(--color-ink)] md:text-5xl"
+            className="text-gold-metallic-deep font-display max-w-lg text-3xl leading-[1.15] md:text-5xl"
           />
 
           <div className="mt-7 flex max-w-lg flex-col gap-4">
@@ -62,7 +62,7 @@ export function AboutCamilly() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="mt-10"
           >
-            <p className="font-script text-4xl text-[var(--color-rose-deep)]">Camilly Santos</p>
+            <p className="text-gold-metallic-deep font-script text-4xl">Camilly Santos</p>
             <p className="mt-1 text-xs uppercase tracking-[0.2em] text-[var(--color-muted)]">
               Fundadora do Studio
             </p>

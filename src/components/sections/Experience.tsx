@@ -35,7 +35,7 @@ export function Experience() {
                   <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[var(--color-rose-light)] text-[var(--color-rose-deep)]">
                     <Icon size={18} strokeWidth={1.5} />
                   </span>
-                  <h3 className="font-display mt-4 text-lg text-[var(--color-ink)]">{item.title}</h3>
+                  <h3 className="text-gold-metallic-deep font-display mt-4 text-lg">{item.title}</h3>
                   <p className="mt-1 text-sm leading-relaxed text-[var(--color-muted)]">
                     {item.description}
                   </p>

@@ -9,7 +9,7 @@ export function PurposeStatement() {
         mode="lines"
         text={purposeStatement}
         viewportAmount={0.5}
-        className="font-display max-w-4xl text-3xl leading-[1.3] text-white md:text-6xl"
+        className="text-gold-metallic font-display max-w-4xl text-3xl leading-[1.3] md:text-6xl"
       />
     </section>
   );

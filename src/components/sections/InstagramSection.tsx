@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { ImagePlus } from "lucide-react";
 import { InstagramGlyph } from "@/components/ui/icons";
 import { Button } from "@/components/ui/Button";
+import { AnimatedText } from "@/components/ui/AnimatedText";
 import { site } from "@/lib/data/site";
 
 const tiles = [
@@ -24,12 +25,21 @@ export function InstagramSection() {
       <div className="mx-auto max-w-7xl">
         <div className="mb-14 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <div>
-            <span className="mb-3 block text-xs font-semibold uppercase tracking-[0.3em] text-[var(--color-rose)]">
+            <motion.span
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.8 }}
+              transition={{ duration: 0.6 }}
+              className="mb-3 block text-xs font-semibold uppercase tracking-[0.3em] text-[var(--color-rose)]"
+            >
               {site.instagramHandle}
-            </span>
-            <h2 className="font-display text-4xl text-[var(--color-ink)] md:text-5xl">
-              Acompanhe meu trabalho
-            </h2>
+            </motion.span>
+            <AnimatedText
+              as="h2"
+              mode="lines"
+              text={["Acompanhe meu trabalho"]}
+              className="text-gold-metallic-deep font-display text-4xl md:text-5xl"
+            />
           </div>
           <Button href={site.instagramUrl} external variant="outline">
             <InstagramGlyph size={14} strokeWidth={1.5} /> Seguir no Instagram

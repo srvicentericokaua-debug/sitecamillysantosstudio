@@ -70,7 +70,7 @@ export function Services({ showCta = true }: ServicesProps) {
                     Em breve
                   </span>
                 )}
-                <h3 className="font-display text-lg text-[var(--color-ink)]">{service.name}</h3>
+                <h3 className="text-gold-metallic-deep font-display text-lg">{service.name}</h3>
                 <p className="mt-1 text-xs leading-relaxed text-[var(--color-muted)]">
                   {service.description}
                 </p>

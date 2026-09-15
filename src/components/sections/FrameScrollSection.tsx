@@ -249,7 +249,7 @@ export function FrameScrollSection() {
               <span className="relative block text-xs uppercase tracking-[0.35em] text-[var(--color-rose-deep)]">
                 O processo
               </span>
-              <h2 className="font-display relative mt-4 max-w-md text-3xl leading-[1.15] text-[var(--color-ink)] md:text-5xl">
+              <h2 className="text-gold-metallic-deep font-display relative mt-4 max-w-md text-3xl leading-[1.15] md:text-5xl">
                 Cada detalhe, em movimento.
               </h2>
             </div>
@@ -280,7 +280,7 @@ export function FrameScrollSection() {
                   className="absolute -inset-6 rounded-full md:-inset-8"
                   style={{ background: "rgba(253,243,241,0.9)", filter: "blur(22px)" }}
                 />
-                <p className="font-display relative text-2xl leading-snug text-[var(--color-ink)] md:text-3xl">
+                <p className="text-gold-metallic-deep font-display relative text-2xl leading-snug md:text-3xl">
                   {caption.text}
                 </p>
               </div>

@@ -43,16 +43,16 @@ export function FinalCTA() {
           </motion.span>
           <AnimatedText
             as="h2"
-            mode="words"
+            mode="lines"
             text="Agende seu horário"
-            className="font-display text-3xl text-white md:text-5xl"
+            className="text-gold-metallic font-display text-3xl md:text-5xl"
           />
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.8 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="font-script mt-2 text-3xl text-white/90 md:text-4xl"
+            className="text-gold-metallic font-script mt-2 text-3xl md:text-4xl"
           >
             e sinta a diferença!
           </motion.p>
