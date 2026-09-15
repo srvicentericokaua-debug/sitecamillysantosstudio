@@ -243,8 +243,8 @@ export function FrameScrollSection() {
             <div className="relative w-fit">
               <div
                 aria-hidden
-                className="absolute -inset-4 rounded-2xl md:-inset-6"
-                style={{ background: "rgba(253,243,241,0.94)", filter: "blur(14px)" }}
+                className="absolute -inset-6 rounded-full md:-inset-10"
+                style={{ background: "rgba(253,243,241,0.9)", filter: "blur(26px)" }}
               />
               <span className="relative block text-xs uppercase tracking-[0.35em] text-[var(--color-rose-deep)]">
                 O processo
@@ -277,8 +277,8 @@ export function FrameScrollSection() {
               <div className={cn("relative w-fit", isRight && "ml-auto")}>
                 <div
                   aria-hidden
-                  className="absolute -inset-4 rounded-2xl md:-inset-5"
-                  style={{ background: "rgba(253,243,241,0.94)", filter: "blur(12px)" }}
+                  className="absolute -inset-6 rounded-full md:-inset-8"
+                  style={{ background: "rgba(253,243,241,0.9)", filter: "blur(22px)" }}
                 />
                 <p className="font-display relative text-2xl leading-snug text-[var(--color-ink)] md:text-3xl">
                   {caption.text}
