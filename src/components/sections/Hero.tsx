@@ -11,11 +11,11 @@ import { heroTrustItems } from "@/lib/data/experience";
 import { generalWhatsAppLink } from "@/lib/whatsapp";
 
 const INTRO_SESSION_KEY = "cs-intro-played";
-// Kept slightly longer than the route-transition overlay's own 6s runtime
+// Kept slightly longer than the route-transition overlay's own 4.8s runtime
 // (RouteTransitionOverlay.tsx) so the hero's auto-scroll never fires while
 // still hidden behind the overlay -- the user should see the hero settled
 // before the page glides away.
-const INTRO_LOCK_MS = 6400;
+const INTRO_LOCK_MS = 5200;
 
 export function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
